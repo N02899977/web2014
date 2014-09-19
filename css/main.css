@@ -14,6 +14,10 @@ button {
 	float:right;
 }
 
+#login {
+	float:right;
+}
+
 .content { min-height: 600px; }
 .content, header .container, footer .container { background-color: #FFF; }
 .placeholder { text-align: center; }
