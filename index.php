@@ -32,7 +32,7 @@
         
         
         <footer>
-            <div class="container">
+            <div data-spy="affix" class="container">
                 <p>
                     Heidi Fritz
                 </p>
