@@ -18,15 +18,27 @@ button {
 	float:right;
 }
 
+.btn-primary,
+.btn-primary:hover,
+.btn-primary.active {
+  color: #FFFFFF;
+  background-color: #7F0000;
+  border-color: #7A0000;
+}
 .content { min-height: 600px; }
-.content, header .container, footer .container { background-color: #FFF; }
+.content, header .container, footer .container { color:#999999; }
 .placeholder { text-align: center; }
+
+.initialy-hidden {
+	display: none;
+}
 
 footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: 60px;
-  background-color: #FFFFFF;
+  height: 30px;
+  color:#999999;
+  background-color: #333333;
 }
