@@ -10,21 +10,16 @@ body {
 background: url("http://nxrgamingclan.com/wp-content/uploads/2014/06/metal-wallpaper-6.jpg") no-repeat center top;
  }
 
-button {
-	float:right;
-}
 
 #login {
 	float:right;
 }
 
-.btn-primary,
-.btn-primary:hover,
-.btn-primary.active {
-  color: #FFFFFF;
-  background-color: #7F0000;
-  border-color: #7A0000;
-}
+.btn-danger{
+
+  background-color: #ff0000;
+ }
+
 .content { min-height: 600px; }
 .content, header .container, footer .container { color:#999999; }
 .placeholder { text-align: center; }

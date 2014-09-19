@@ -2,8 +2,8 @@
     <div class="container">
     	       
         <div id="login" class="btn-group" data-toggle="buttons">
-			<label class="btn btn-primary">
-		    	<input type="radio" name="options" id="login_deco"> Log In
+			<label class="btn btn-danger">
+		    	<input type="radio" name="options" > Log In
 			</label>
 		</div>
         
