@@ -1,0 +1,28 @@
+html {
+  	position: relative;
+  	min-height: 100%;
+}
+body {
+	padding-top: 30px;
+	margin-bottom: 60px;
+	}
+body { 
+background: url("http://nxrgamingclan.com/wp-content/uploads/2014/06/metal-wallpaper-6.jpg") no-repeat center top;
+ }
+
+button {
+	float:right;
+}
+
+.content { min-height: 600px; }
+.content, header .container, footer .container { background-color: #FFF; }
+.placeholder { text-align: center; }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #FFFFFF;
+}

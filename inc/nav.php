@@ -1,11 +1,19 @@
 <nav class="navbar">
     <div class="container">
+    	
         <button class="dropdown">
             <a data-toggle="dropdown" href="#">Log In</a>
             <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                 <li href="">Settings</li>
             </ul>        
         </button>
+        
+        <div class="btn-group" data-toggle="buttons">
+			<label class="btn btn-primary">
+		    	<input type="radio" name="options" id="login"> Click Me!
+			</label>
+		</div>
+        
         <ul class="nav nav-tabs" role="tablist">
 		  <li class="active"><a href="#home" role="tab" data-toggle="tab">Home</a></li>
 		  <li><a href="#profile" role="tab" data-toggle="tab">Profile</a></li>
