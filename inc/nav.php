@@ -1,12 +1,5 @@
 <nav class="navbar">
     <div class="container">
-    	       
-        <div id="login" class="btn-group" data-toggle="buttons">
-			<label class="btn btn-danger">
-		    	<input type="radio" name="options" > Log In
-			</label>
-		</div>
-        
         <ul class="nav nav-tabs" role="tablist">
 		  <li class="active"><a href="#home" role="tab" data-toggle="tab">Home</a></li>
 		  <li><a href="#profile" role="tab" data-toggle="tab">Profile</a></li>
