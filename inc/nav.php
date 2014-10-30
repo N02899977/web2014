@@ -1,12 +1,42 @@
-<nav class="navbar">
-    <div class="container">
-        <ul class="nav nav-tabs" role="tablist">
-		  <li class="active"><a href="index.html" role="tab" data-toggle="tab">Home</a></li>
-		  <li><a href="profile.html" role="tab" data-toggle="tab">Profile</a></li>
-		  <li><a href="#fitness" role="tab" data-toggle="tab">Fitness</a></li>
-		  <li><a href="#diet" role="tab" data-toggle="tab">Diet</a></li>
-		  <li><a href="#goals" role="tab" data-toggle="tab">Goals</a></li>
-		  <li><a href="#settings" role="tab" data-toggle="tab">Settings</a></li>
-		</ul>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Home</a>
     </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="profile"><a href="profile.html">Profile</a></li>
+        <li class="fitness"><a href="#">Fitness</a></li>
+        <li class="diet"><a href="#">Diet</a></li>
+        <li class="goals"><a href="#">Goals</a></li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Search</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Settings <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
 </nav>
