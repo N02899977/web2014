@@ -90,11 +90,12 @@
 		<script type="text/javascript">
 			$(function(){
 				$("#top-nav").load("inc/nav.php", function(){
-					$(".food").addClass("active");					
+					$(".index").addClass("active");					
 				});
-				$('#myModal').on('hidden.bs.modal', function (e) {
-				  $("#myAlert").show();
-				});
+			});		
+				
+			$('#myModal').on('hidden.bs.modal', function (e) {
+			  $("#myAlert").show();
 			});
 		</script>
     </body>
