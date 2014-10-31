@@ -19,7 +19,7 @@
         <li class="diet"><a href="diet.html">Diet</a></li>
         <li class="goals"><a href="goals.html">Goals</a></li>
       </ul>
-      <form class="navbar-form navbar-left" role="search">
+      <form class="navbar-form navbar-right" role="search">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search...">
         </div>

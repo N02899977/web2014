@@ -25,6 +25,12 @@ background: url("http://nxrgamingclan.com/wp-content/uploads/2014/06/metal-wallp
 .content, header .container, footer .container { color:#999999; }
 .placeholder { text-align: center; }
 
+.carousel .carousel-control { background:none; visibility: hidden; }
+.carousel:hover .carousel-control { visibility: visible; }
+.carousel-indicators { bottom:-50px; } 
+.carousel-indicators li { border-color:#999; background-color:#ccc; }
+
+
 .initialy-hidden {
 	display: none;
 }
