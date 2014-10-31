@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    	<meta charset="utf-8">
+        <title>Fitness Tracker Site</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    
+    
+    <body>
+    		<div id="top-nav"> </div>
+			        <header>
+			            <div class="container">
+							<h3>Fitness</h3>
+						</div>
+			        </header>
+    
+    
+        <div class="container">
+        
+        	<a id="login" class="btn btn-danger" data-toggle="modal"  data-target=".bs-example-modal-sm" href="login.html">
+				Sign In
+			</a>
+				
+				<!-- Modal -->
+				<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+				  <div class="modal-dialog modal-sm">
+				    <div class="modal-content">
+				    </div>
+				  </div>
+				</div>
+        
+        
+        
+        
+        
+        
+        </div>
+        
+        
+        <footer>
+            <div class="container">
+                <p>
+                    by Heidi Fritz
+                </p>
+            </div>
+        </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.4.0/holder.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#top-nav").load("inc/nav.php", function(){
+					$(".profile").addClass("active");					
+				});
+				$('#myModal').on('hidden.bs.modal', function (e) {
+				  $("#myAlert").show();
+				});
+			});
+		</script>
+    </body>
+</html>
