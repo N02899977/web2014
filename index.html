@@ -20,14 +20,10 @@
     
     
         <div class="container">
-        
-        	<a id="login" class="btn btn-danger" data-toggle="modal"  data-target=".bs-example-modal-sm" href="login.html">
-				Sign In
-			</a>
-				
+        	
 				<!-- Modal -->
-				<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-				  <div class="modal-dialog modal-sm">
+				<div class="modal fade" id="myModal" tabindex="-1" >
+				  <div class="modal-dialog">
 				    <div class="modal-content">
 				    </div>
 				  </div>
@@ -109,8 +105,15 @@
 		      <img src="http://www.urblife.com/wp-content/uploads/2011/09/Berries1.jpg" alt="berries" class="img-rounded" style="width:200px; height:200px; position:relative">
 		      <div class="caption">
 		        <h3>Fruit</h3>
-		        <p>...</p>
-		        <p><a href="#" class="btn btn-success" role="button">Save for Later</a> <a href="#" class="btn btn-default" role="button">Learn Recipe</a></p>
+		        <ul>
+		        	<li>blueberries</li>
+		        	<li>strawberries</li>
+		        	<li>raspberries</li>
+		        </ul>
+		        <p>Sumo atqui no quo, ius enim facilis civibus eu. 
+		        	Usu cu idque habemus. Rebum complectitur ea qui, ex eam melius civibus temporibus, mea essent consetetur ne. Porro ludus te mea. 
+		        	Utroque lucilius antiopam at nam, tota aliquip apeirian an has.</p>
+		        <p><a href="#" class="btn btn-default" role="button">Add to Favorites</a> <a href="#" class="btn btn-success" role="button">Learn Recipe</a></p>
 		      </div>
 		    </div>
 		  </div>
@@ -120,8 +123,16 @@
 		      <img src="http://img1.coastalliving.timeinc.net/sites/default/files/image/mar_12/pasta/0312_pasta-scampi2-l.jpg" alt="pasta" class="img-rounded" style="width:200px; height:200px; position:relative">
 		      <div class="caption">
 		        <h3>Pasta</h3>
-		        <p>...</p>
-		        <p><a href="#" class="btn btn-success" role="button">Save for Later</a> <a href="#" class="btn btn-default" role="button">Learn Recipe</a></p>
+		        <ul>
+		        	<li>1 box of pasta</li>
+		        	<li>1 bag of frozen shrimp</li>
+		        </ul>
+		        <p>Sumo atqui no quo, ius enim facilis civibus eu. 
+		        	Usu cu idque habemus. Rebum complectitur ea qui, ex eam melius civibus temporibus, mea essent consetetur ne. Porro ludus te mea. 
+		        	Utroque lucilius antiopam at nam, tota aliquip apeirian an has. Sumo atqui no quo, ius enim facilis civibus eu. 
+		        	Usu cu idque habemus. Rebum complectitur ea qui, ex eam melius civibus temporibus, mea essent consetetur ne. Porro ludus te mea. 
+		        	Utroque lucilius antiopam at nam, tota aliquip apeirian an has.</p>
+		        <p><a href="#" class="btn btn-default" role="button">Add to Favorites</a> <a href="#" class="btn btn-success" role="button">Learn Recipe</a></p>
 		      </div>
 		    </div>
 		  </div>
@@ -131,8 +142,16 @@
 		      <img src="http://www.magforwomen.com/wp-content/uploads/2013/11/easy-pumpkin-recipes-for-thanksgiving.jpg" alt="pumpkin recipe" class="img-rounded" style="width:400px; height:200px; position:relative">
 		      <div class="caption">
 		        <h3>Pumpkin</h3>
-		        <p>...</p>
-		        <p><a href="#" class="btn btn-success" role="button">Save for Later</a> <a href="#" class="btn btn-default" role="button">Learn Recipe</a></p>
+		        <ul>
+		        	<li>1 pumpkin</li>
+		        	<li>1/2 cup rice</li>
+		        	<li>1 fancy leaf</li>
+		        </ul>
+		        <p>Sumo atqui no quo, ius enim facilis civibus eu. 
+		        	Usu cu idque habemus. Rebum complectitur ea qui, ex eam melius civibus temporibus, mea essent consetetur ne. Porro ludus te mea. 
+		        	Utroque lucilius antiopam at nam, tota aliquip apeirian an has. Sumo atqui no quo, ius enim facilis civibus eu. 
+		        	Usu cu idque habemus. Rebum complectitur ea qui, ex eam melius civibus temporibus.</p>
+		        <p><button href="#" type="button" id="myButton" class="btn btn-default" role="button" data-loading-text="Addng..." autocomplete="off">Add to Favorites</button> <a href="#" class="btn btn-success" role="button">Learn Recipe</a></p>
 		      </div>
 		    </div>
 		  </div>
@@ -145,7 +164,7 @@
         <footer>
             <div class="container">
                 <p>
-                    by Heidi Fritz
+                    &copy; 2014 Heidi Fritz
                 </p>
             </div>
         </footer>
@@ -160,8 +179,9 @@
 			});		
 				
 			$('#myModal').on('hidden.bs.modal', function (e) {
-			  $("#myAlert").show();
+			  	$("#myAlert").show();
 			});
+			
 		</script>
     </body>
 </html>

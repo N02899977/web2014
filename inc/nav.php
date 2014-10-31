@@ -20,6 +20,11 @@
         <li class="goals"><a href="goals.html">Goals</a></li>
       </ul>
       <form class="navbar-form navbar-right" role="search">
+        	<a id="login" class="btn btn-danger" data-toggle="modal"  data-target="#myModal" href="login.html">
+				Sign In
+			</a>
+	  </form>
+      <form class="navbar-form navbar-right" role="search">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search...">
         </div>

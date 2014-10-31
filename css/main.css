@@ -2,6 +2,9 @@ html {
   	position: relative;
   	min-height: 100%;
 }
+
+header{padding-top: 30px}
+
 body {
 	padding-top: 50px;
 	margin-bottom: 60px;
@@ -30,19 +33,39 @@ background: url("http://nxrgamingclan.com/wp-content/uploads/2014/06/metal-wallp
 .carousel-indicators { bottom:-50px; } 
 .carousel-indicators li { border-color:#999; background-color:#ccc; }
 
+.carousel-control {
+  top:50%;
+  width:auto;
+  height:1em;
+  background:transparent;
+}
+.carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right  {
+  position:static;
+  display:block;
+  width:auto;
+}
+.carousel-control .glyphicon-chevron-left:before { margin-left:0;}
+.carousel-control .glyphicon-chevron-right:before { margin-right:0;}
+
 
 .initialy-hidden {
 	display: none;
 }
 
+.carousel-navigation.left {  
+    margin-left: -200px;
+}
 
+.carousel-navigation.right {
+    margin-right: -45px;
+}
 
 footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: 30px;
+  height: 55px;
   color:#999999;
   background-color: #333333;
 }
