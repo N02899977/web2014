@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">Home</a>
+      <a class="navbar-brand" href="index.html">Fit Track</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -19,16 +19,18 @@
         <li class="diet"><a href="diet.html">Diet</a></li>
         <li class="goals"><a href="goals.html">Goals</a></li>
       </ul>
-      <form class="navbar-form navbar-right" role="search">
+      <form class="navbar-form navbar-right">
         	<a id="login" class="btn btn-danger" data-toggle="modal"  data-target="#myModal" href="login.html">
-				Sign In
+				Sign In / Up
 			</a>
 	  </form>
       <form class="navbar-form navbar-right" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search...">
-        </div>
-        <button type="submit" class="btn btn-default">Search</button>
+        <div class="input-group add-on">
+	      <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+	      <div class="input-group-btn">
+	        <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+	      </div>
+	    </div>
       </form>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
