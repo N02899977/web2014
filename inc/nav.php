@@ -19,10 +19,10 @@
         <li class="diet"><a href="diet.html">Diet</a></li>
         <li class="goals"><a href="goals.html">Goals</a></li>
       </ul>
-      <form class="navbar-form navbar-right">
-        	<a id="login" class="btn btn-danger" data-toggle="modal"  data-target="#myModal" href="login.html">
-				Sign In / Up
-			</a>
+      <form class="navbar-form navbar-right" role="search">
+        	<button id="login" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" href="login.html">
+			  Sign in
+			</button>
 	  </form>
       <form class="navbar-form navbar-right" role="search">
         <div class="input-group add-on">

@@ -10,10 +10,26 @@
     </head>
     <body>
     		<div id="top-nav"> </div>
-			        <header>
-			            <div class="container">
-			            	<a id="login" class="btn btn-danger" data-toggle="modal"  data-target=".bs-example-modal-sm" href="login.html">
-								Sign In
-							</a>
-						</div>
-			        </header>
+    		<div class="container">
+        
+        	
+				
+				<!-- Modal -->
+				<div class="modal fade" id="myModal" tabindex="-1" >
+				  <div class="modal-dialog">
+				    <div class="modal-content">
+				    </div>
+				  </div>
+				</div>
+			
+        </div>
+        
+        
+        <footer>
+            <div class="container">
+                <p>
+                    by Heidi Fritz
+                </p>
+            </div>
+        </footer>
+    </body>
