@@ -19,11 +19,15 @@
         <li class="diet"><a href="diet.html">Diet</a></li>
         <li class="goals"><a href="goals.html">Goals</a></li>
       </ul>
+      
       <form class="navbar-form navbar-right" role="search">
         	<button id="login" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" href="login.html">
 			  Sign in
 			</button>
+      		<i style="font-style: normal;"> or </i>
+      		<a href="signup.html">Sign up</a>
 	  </form>
+	  
       <form class="navbar-form navbar-right" role="search">
         <div class="input-group add-on">
 	      <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
