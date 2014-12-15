@@ -1,6 +1,6 @@
 <header>
 	<div class="container">
-		<h1>Fitness Tracker - Food</h1>
+		<h3>Diet</h3>
 	</div>
 </header>
 
@@ -23,20 +23,13 @@
 				  </div>
 				</div>
 				
-				<!-- Alert -->
-				<div class="alert alert-success initialy-hidden" id="myAlert">
-					<button type="button" class="close" data-dismiss="alert">
-						<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-					</button>
-					<div></div>
-				</div>
+				
 				
           <div class="table-responsive">
             <table class="table table-striped">
               <thead>
                 <tr>
                   <th>Name</th>
-                  <th>Type</th>
                   <th>Calories</th>
                   <th>Fat (g)</th>
                   <th>Carbs (g)</th>
@@ -48,7 +41,6 @@
               <tbody>
                <tr ng-repeat='row in data'>
                   <td>{{row.Name}}</td>
-                  <td>{{row.T_Name}}</td>
                   <td>{{row.Calories}}</td>
                   <td>{{row.Fat}}</td>
                   <td>{{row.Carbs}}</td>
@@ -70,9 +62,19 @@
 		</div>
 		<div class="col-sm-4">
 			<div class="well" ng-controller="social" >
-					<img src="http://graph.facebook.com/{{me.id}}/picture" align="left" />
-					<b>{{me.name}}</b><br>
-					{{me.email}}
+				<div class="container">
+    			
+    			<div class="fb-login-button" onlogin="checkLoginState();" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="true" style="position:right"></div>
+    			
+    			<br>
+				<div>
+					<img src="http://graph.facebook.com/{{me.id}}/picture" style="margin-top:10px; padding-right: 10px"align="left" />
+					<dl>
+						Welcome, {{me.name}}
+						<dd>{{me.email}}</dd>
+					</dl>
+				</div>
+			</div> 
 			</div>			
 			<div class="well" ng-controller="bmiCalculator" >
 				<input type="text" ng-model='height' class="form-control" placeholder="Your Height (in)" />
@@ -215,7 +217,7 @@
 		<script>
 				  window.fbAsyncInit = function() {
 				    FB.init({
-				      appId      : '908005495876889',
+				      appId      : '410747215739708',
 				      xfbml      : true,
 				      cookie     : true,
 				      version    : 'v2.2'

@@ -1,5 +1,5 @@
 <?
-	include_once __DIR__ . '/../inc/_all.php';
+	include_once __DIR__ . '/../inc/all.php';
 $action = isset($_REQUEST['action']) ? $_REQUEST['action'] : null;
 $method = $_SERVER['REQUEST_METHOD'];
 $format = isset($_REQUEST['format']) ? $_REQUEST['format'] : 'web';
@@ -7,7 +7,7 @@ $view 	= null;
 switch ($action . '_' . $method) {
 	case 'create_GET':
 		$model = Food::Blank();
-		$view = "food/edit.php";
+		$view = "diet/edit.php";
 		break;
 	case 'save_POST':
 			$sub_action = empty($_REQUEST['id']) ? 'created' : 'updated';
@@ -26,7 +26,7 @@ switch ($action . '_' . $method) {
 			}else{
 				//my_print($errors);
 				$model = $_REQUEST;
-				$view = "food/edit.php";		
+				$view = "diet/edit.php";		
 			}
 			break;
 	case 'delete':
@@ -39,17 +39,17 @@ switch ($action . '_' . $method) {
 		break;
 	case 'edit_GET':
 		$model = Food::Get($_REQUEST['id']);
-		$view = "food/edit.php";		
+		$view = "diet/edit.php";		
 		break;
 	case 'delete_GET':
 		$model = Food::Get($_REQUEST['id']);
-		$view = "food/delete.php";		
+		$view = "diet/delete.php";		
 		break;
 	case 'delete_POST':
 		$errors = Food::Delete($_REQUEST['id']);
 		if($errors){
 				$model = Food::Get($_REQUEST['id']);
-				$view = "food/delete.php";
+				$view = "diet/delete.php";
 		}else{
 				header("Location: ?sub_action=$sub_action&id=$_REQUEST[id]");
 				die();			
@@ -58,7 +58,7 @@ switch ($action . '_' . $method) {
 	case 'index_GET':
 	default:
 		$model = Food::Get();
-		$view = 'food/index.php';		
+		$view = 'diet/index.php';		
 		break;
 }
 switch ($format) {
@@ -70,6 +70,6 @@ switch ($format) {
 		break;		
 	case 'web':
 	default:
-		include __DIR__ . "/../Views/shared/_Template.php";		
+		include __DIR__ . "/../Views/shared/Template.php";		
 		break;
 }

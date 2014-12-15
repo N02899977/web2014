@@ -5,7 +5,7 @@
 	<input type="hidden" name="id" value="<?=$model['id']?>" />
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-    <h4 class="modal-title" id="myModalLabel">Record a food</h4>
+    <h4 class="modal-title" id="myModalLabel">New Food Entry</h4>
   </div>
   <div class="modal-body">
   	
@@ -27,16 +27,6 @@
 		      	<span class="glyphicon glyphicon-remove form-control-feedback"></span>
 		      	<span class="help-block"><?=$errors['Name']?></span>
 		      <? endif; ?>
-		    </div>
-		  </div>
-		  <div class="form-group">
-		    <label for="selType_id" class="col-sm-2 control-label">Type</label>
-		    <div class="col-sm-10">
-		    	<select class="form-control" id="selType_id" name="Type_id">
-		    		<? foreach (Food_Types::Get() as $value): ?>
-						<option <?= $value['id']==$model['Type_id'] ? 'selected' : '' ?> value="<?=$value['id']?>"><?=$value['Name']?></option>
-					<? endforeach; ?>
-		    	</select>
 		    </div>
 		  </div>
 		  <div class="form-group">
@@ -67,6 +57,15 @@
 		    <label for="txtTime" class="col-sm-2 control-label">Time</label>
 		    <div class="col-sm-10">
 		      <input type="datetime" class="form-control" id="txtTime" name="Time" placeholder="Time"  value="<?=date('m/d/Y H:i:s', strtotime( $model['Time'])) ?>">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label class="col-sm-2 control-label">Friends</label>
+		    <div class="col-sm-10">
+		      <input type="hidden" class="form-control" id="txtFriends">
+		    	<div style="height: 250px; overflow-y: scroll;">
+		    		
+		    	</div>
 		    </div>
 		  </div>
 

@@ -1,5 +1,5 @@
 <?php
-	include_once __DIR__ . '/../inc/_all.php';
+	include_once __DIR__ . '/../inc/all.php';
 /**
  * 
  */
@@ -13,8 +13,7 @@ class Food {
 	public static function Get($id=null)
 	{
 		$sql = "	SELECT E.*, T.Name as T_Name
-					FROM 2014Fall_Food_Eaten E
-						Join 2014Fall_Food_Types T ON E.Type_id = T.id 
+					FROM Food E 
 		";
 		if($id){
 			$sql .= " WHERE E.id=$id ";
@@ -32,15 +31,15 @@ class Food {
 			$row2 = escape_all($row, $conn);
 			$row2['Time'] = date( 'Y-m-d H:i:s', strtotime( $row2['Time'] ) );
 			if (!empty($row['id'])) {
-				$sql = "Update 2014Fall_Food_Eaten
-							Set Name='$row2[Name]', Type_id='$row2[Type_id]', Calories='$row2[Calories]',
+				$sql = "Update Food
+							Set Name='$row2[Name]', Calories='$row2[Calories]',
 								Fat='$row2[Fat]', Carbs='$row2[Carbs]', Fiber='$row2[Fiber]', Time='$row2[Time]'
 						WHERE id = $row2[id]
 						";
 			}else{
-				$sql = "INSERT INTO 2014Fall_Food_Eaten
-						(Name, Type_id, Calories, Fat, Carbs, Fiber, Time, created_at, UserId)
-						VALUES ('$row2[Name]', '$row2[Type_id]', '$row2[Calories]', '$row2[Fat]', '$row2[Carbs]', '$row2[Fiber]', '$row2[Time]', Now(), 3 ) ";				
+				$sql = "INSERT INTO Food
+						(Name, Calories, Fat, Carbs, Fiber, Time, created_at, UserId)
+						VALUES ('$row2[Name]', '$row2[Calories]', '$row2[Fat]', '$row2[Carbs]', '$row2[Fiber]', '$row2[Time]', Now(), 3 ) ";				
 			}
 			
 			
@@ -61,7 +60,7 @@ class Food {
 		static public function Delete($id)
 		{
 			$conn = GetConnection();
-			$sql = "DELETE FROM 2014Fall_Food_Eaten WHERE id = $id";
+			$sql = "DELETE FROM Food WHERE id = $id";
 			//echo $sql;
 			$results = $conn->query($sql);
 			$error = $conn->error;
@@ -76,7 +75,7 @@ class Food {
 			if(empty($row['Name'])) $errors['Name'] = "is required";
 			if(empty($row['Calories'])) $errors['Calories'] = "is required";
 			
-			if($row['Carbs'] >= 20) $errors['Carbs'] = "must less than 20";
+			if($row['Carbs'] >= 30) $errors['Carbs'] = "must be less than 30";
 			if(empty($row['Carbs'])) $errors['Carbs'] = "is required";
 			
 			return count($errors) > 0 ? $errors : false ;
