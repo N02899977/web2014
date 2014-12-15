@@ -7,17 +7,50 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/main.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     </head>
     
     
-    <body>
+    <body ng-app="app" ng-controller="social">
+    		
+    		<div id="fb-root"> </div>
+			<script>(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=410747215739708&version=v2.0";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+			</script>
+    		
     		<div id="top-nav"> </div>
+    		
+    		
+    		
+    		<!-- FB Like -->
+    		<div class="container">
+    			<br>
+    			<div class="fb-login-button" onlogin="checkLoginState();" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="true" style="position:right"></div>
+    			
+    			<br><br>
+	    		
+				
+				
+				<div>
+					<img src="http://graph.facebook.com/{{me.id}}/picture" style="margin-top:10px; padding-right: 10px"align="left" />
+					<dl>
+						Welcome, {{me.name}}
+						<dd>{{me.email}}</dd>
+					</dl>
+				</div>
+			</div> <!-- end FB Like -->
 			        <header>
 			            <div class="container">
 							<h3>Home</h3>
 						</div>
 			        </header>
-    
+			        
+    		
     
         <div class="container">
         	
@@ -162,13 +195,34 @@
     </div><!-- end container -->
         
         
+        
         <footer>
             <div class="container">
                 <p>
-                    &copy; 2014 Heidi Fritz
+                    &copy; 2014 Heidi Fritz <a href="https://developers.facebook.com/apps/410747215739708/dashboard/"> 
+                    							<img id="facebook-page" src="images/facebooklogo.jpg" class="img-rounded" style="width:40px; height:40px; margin-left: 10px; margin-top: 5px">
+                    						</a>
+                    						<a href="https://twitter.com/fritzheidi1"> 
+                    							<img id="facebook-page" src="images/twitterbutton.png" class="img-rounded" style="width:40px; height:40px; margin-left: 5px; margin-top: 5px">
+                    						</a>
+											<a class="twitter-follow-button"
+											  href="https://twitter.com/fritzheidi1"
+											  data-show-count="false"
+											  data-lang="en">
+											Follow @fritzheidi1
+											</a>
+											<a
+											  class="fb-like"
+											  data-share="true"
+											  data-width="450"
+											  data-show-faces="false">
+											</a>
+											
                 </p>
+                
             </div>
         </footer>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.4.0/holder.js"></script>
@@ -180,6 +234,64 @@
 			});		
 			
 			
+		</script>
+		<script type="text/javascript">
+			var $socialScope = null;
+			angular.module('app', [])
+				.controller('social', function($scope){
+					$socialScope = $scope;
+					$socialScope.$apply();
+				});
+			function checkLoginState() {
+			    FB.getLoginStatus(function(response) {
+				    $socialScope.status = response;
+				    if (response.status === 'connected') {
+				      FB.api('/me', function(response) {
+					      $socialScope.me = response;
+					      $socialScope.$apply();
+					      console.log(response);
+					    });
+				    } else if (response.status === 'not_authorized') {
+				      // The person is logged into Facebook, but not your app.
+				      console.log('not_authorized');
+				    } else {
+				      // The person is not logged into Facebook, so we're not sure if
+				      // they are logged into this app or not.
+				      console.log('Not Logged in');
+				    }
+			    });
+			  }
+		</script>
+		
+		<script>
+				  window.fbAsyncInit = function() {
+				    FB.init({
+				      appId      : '410747215739708',
+				      xfbml      : true,
+				      cookie     : true,
+				      version    : 'v2.2'
+				    });
+				    checkLoginState();
+				  };
+				
+				  (function(d, s, id){
+				     var js, fjs = d.getElementsByTagName(s)[0];
+				     if (d.getElementById(id)) {return;}
+				     js = d.createElement(s); js.id = id;
+				     js.src = "//connect.facebook.net/en_US/sdk.js";
+				     fjs.parentNode.insertBefore(js, fjs);
+				   }(document, 'script', 'facebook-jssdk'));
+		</script>
+		
+		<script type="text/javascript">
+				window.twttr = (function (d, s, id) {
+				  var t, js, fjs = d.getElementsByTagName(s)[0];
+				  if (d.getElementById(id)) return;
+				  js = d.createElement(s); js.id = id;
+				  js.src= "https://platform.twitter.com/widgets.js";
+				  fjs.parentNode.insertBefore(js, fjs);
+				  return window.twttr || (t = { _e: [], ready: function (f) { t._e.push(f) } });
+				}(document, "script", "twitter-wjs"));
 		</script>
     </body>
 </html>

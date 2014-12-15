@@ -25,13 +25,25 @@
 				        </label>
 				      </div>
 				      <h6>Don't have an account? <a href="signup.html" style="margin: 20px">Sign Up</a></h6>
+				      <h6>Or Sign In using Facebook</h6>
+				      <div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="true"> </div>
 				    </div>
 				  </div>
 				</form>
 				
 	      </div>
 	      
+	      <div id="fb-root"> </div>
+			<script>(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=410747215739708&version=v2.0";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));</script>
+	      
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
     		<button type="submit" class="btn btn-primary">Sign In</button>
 	      </div>
+	      
