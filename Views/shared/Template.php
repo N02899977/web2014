@@ -33,8 +33,27 @@
         <footer>
             <div class="container">
                 <p>
-                    by Heidi Fritz
+                    &copy; 2014 Heidi Fritz <a href="https://developers.facebook.com/apps/410747215739708/dashboard/"> 
+                    							<img id="facebook-page" src="../images/facebooklogo.jpg" class="img-rounded" style="width:40px; height:40px; margin-left: 10px; margin-top: 5px">
+                    						</a>
+                    						<a href="https://twitter.com/fritzheidi1"> 
+                    							<img id="facebook-page" src="../images/twitterbutton.png" class="img-rounded" style="width:40px; height:40px; margin-left: 5px; margin-top: 5px">
+                    						</a>
+											<a class="twitter-follow-button"
+											  href="https://twitter.com/fritzheidi1"
+											  data-show-count="false"
+											  data-lang="en">
+											Follow @fritzheidi1
+											</a>
+											<a
+											  class="fb-like"
+											  data-share="true"
+											  data-width="450"
+											  data-show-faces="false">
+											</a>
+											
                 </p>
+                
             </div>
         </footer>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>

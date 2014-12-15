@@ -1,4 +1,4 @@
-<header>
+<header><br>
 	<div class="container">
 		<h3>Diet</h3>
 	</div>
@@ -72,6 +72,7 @@
 					<dl>
 						Welcome, {{me.name}}
 						<dd>{{me.email}}</dd>
+						<dd>{{me.user_friends}}</dd>
 					</dl>
 				</div>
 			</div> 
